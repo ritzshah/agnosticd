@@ -20,19 +20,19 @@
   agnosticd_user_body:
     msg: "{{ item }}"
   loop:
-    - "**********"
-    - "IMPORTANT: You cannot SSH into the shared cluster."
-    - "Please refer to the demo or lab instructions in order"
-    - "to get the steps on how to access the environment properly."
-    - "**********"
+  - "**********"
+  - "IMPORTANT: You cannot SSH into the shared cluster."
+  - "Please refer to the demo or lab instructions in order"
+  - "to get the steps on how to access the environment properly."
+  - "**********"
 
 - name: Print user info
   agnosticd_user_info:
     msg: "{{ item }}"
   loop:
-    - ""
-    - "Openshift Master Console: https://{{ r_console_route.resources[0].spec.host }}"
-    - "Openshift API for command line 'oc' client: {{ r_api_url.resources[0].status.apiServerURL }}"
+  - ""
+  - "Openshift Master Console: https://{{ r_console_route.resources[0].spec.host }}"
+  - "Openshift API for command line 'oc' client: {{ r_api_url.resources[0].status.apiServerURL }}"
 
 # Leave these as the last tasks in the playbook
 # ---------------------------------------------
